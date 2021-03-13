@@ -1,3 +1,4 @@
-// start project
-mode dev:  npm run start
-mode prod: npm run build
+// start project mode dev: 
+npm run start
+// start project mode prod:
+ npm run build
