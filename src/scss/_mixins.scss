@@ -1,0 +1,37 @@
+@import "variables";
+@mixin button($color) {
+    display: block;
+    height: 32px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 4px;
+    position: relative;
+    transition: background-color $duration $transition-style;
+    min-width: 24px;
+    background-color: transparent;
+    outline: none;
+
+  &:focus,
+  &:hover {
+    border: none;
+    background: #eee;
+  }
+
+  &:active,
+  &--active {
+    border: none;
+    .material-icons {
+      color: $color;
+    }
+  }
+}
+
+@mixin list {
+  display: flex;
+  list-style: none;
+}

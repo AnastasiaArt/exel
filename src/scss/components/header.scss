@@ -1,0 +1,37 @@
+@import '../mixins';
+@import '../variables';
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: ghostwhite;
+    min-height: 58px;
+
+  &__btns {
+    @include list();
+  }
+
+  &__input {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 18px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $border-color;
+    }
+
+    &:hover {
+      border: 1px solid #1a37e8;
+    }
+  }
+
+  &__btn {
+    @include button(red);
+    margin-left: 12px;
+  }
+}
