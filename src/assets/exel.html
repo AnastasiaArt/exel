@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>JS Excel</title>
+</head>
+<body>
+<div class="container" id="app">
+    <div class="exel">
+        <header class="exel__header header">
+            <label for="table-name" class="hidden"></label>
+            <input id="table-name" type="text" class="header__input" value="Новая таблица">
+            <ol class="header__btns">
+                <li>
+                    <button type="button" class="header__btn">
+                        <span class="material-icons">delete</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="header__btn">
+                        <span class="material-icons">exit_to_app</span>
+                    </button>
+                </li>
+            </ol>
+        </header>
+        <main>
+            <div class="exel__toolbar toolbar">
+                <ol class="toolbar__btns">
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_align_left</span>
+                        </button>
+                    </li>
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_align_center</span>
+                        </button>
+                    </li>
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_align_right</span>
+                        </button>
+                    </li>
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_bold</span>
+                        </button>
+                    </li>
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_italic</span>
+                        </button>
+                    </li>
+                    <li class="toolbar__btns-item">
+                        <button type="button" class="toolbar__btn">
+                            <span class="material-icons">format_underline</span>
+                        </button>
+                    </li>
+                </ol>
+            </div>
+            <div class="exel__formula formula">
+                <div class="formula__info" id="formula-label">fx</div>
+                <div
+                    class="formula__input"
+                    role="textbox"
+                    contenteditable="true"
+                    aria-placeholder=""
+                    spellcheck="false"
+                    aria-labelledby="formula-label">
+                </div>
+            </div>
+            <div class="exel__table table">
+                <div class="table__row">
+                    <div class="table__row-info"></div>
+                    <div class="table__row-data">
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+
+                        <div class="table__column">A</div>
+                        <div class="table__column">B</div>
+                        <div class="table__column">C</div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__row-info">1</div>
+                    <div class="table__row-data">
+                        <div class="table__cell selected" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__row-info">2</div>
+                    <div class="table__row-data">
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__row-info">3</div>
+                    <div class="table__row-data">
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                        <div class="table__cell" contenteditable="true">a1</div>
+                        <div class="table__cell" contenteditable="true">b2</div>
+                        <div class="table__cell" contenteditable="true">c3</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
